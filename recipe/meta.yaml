@@ -1,5 +1,5 @@
 {% set name = "PcapPlusPlus" %}
-{% set version = "22.05" %}
+{% set version = "22.11" %}
 
 package:
   name: lib{{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/seladb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5f299c4503bf5d3c29f82b8d876a19be7dea29c2aadcb52f2f3b394846c21da9
+  sha256: 3172f12f2f8a8902ae1ad6be5d65c3059c42c49c1a28e97e5d8d25a48b05e44f
 
 build:
   number: 0
@@ -17,7 +17,7 @@ outputs:
   - name: libpcapplusplus
     build:
       run_exports:
-       - {{ pin_subpackage( 'pcapplusplus-licenses', max_pin='x.x') }}
+        - {{ pin_subpackage( 'pcapplusplus-licenses', max_pin='x.x') }}
     script: build-lib.sh
     requirements:
       build:
@@ -39,13 +39,13 @@ about:
   home: https://pcapplusplus.github.io/
   license: Unlicense AND MIT AND Zlib AND BSD-2-Clause AND ZPL-2.1
   license_file:
-   - LICENSE
-   - 3rdParty/LightPcapNg/LightPcapNg/LICENSE.txt
-   - 3rdParty/MemPlumber/MemPlumber/LICENSE
-   - 3rdParty/dirent-for-Visual-Studio/LICENSE
-   - 3rdParty/hash-library/LICENSE
-   - 3rdParty/Getopt-for-Visual-Studio/getopt.h
-   - 3rdParty/EndianPortable/include/EndianPortable.h
+    - LICENSE
+    - 3rdParty/LightPcapNg/LightPcapNg/LICENSE.txt
+    - 3rdParty/MemPlumber/MemPlumber/LICENSE
+    - 3rdParty/dirent-for-Visual-Studio/LICENSE
+    - 3rdParty/hash-library/LICENSE
+    - 3rdParty/Getopt-for-Visual-Studio/getopt.h
+    - 3rdParty/EndianPortable/include/EndianPortable.h
   summary: PcapPlusPlus is a multiplatform C++ library for capturing, parsing and crafting of network packets
   doc_url: https://pcapplusplus.github.io/docs/quickstart
   dev_url: https://github.com/seladb/PcapPlusPlus
