@@ -1,11 +1,11 @@
-About libpcapplusplus-split
-===========================
+About libpcapplusplus-split-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libpcapplusplus-split-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pcapplusplus.github.io/
 
 Package license: Unlicense AND MIT AND Zlib AND BSD-2-Clause AND ZPL-2.1
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libpcapplusplus-split-feedstock/blob/main/LICENSE.txt)
 
 Summary: PcapPlusPlus is a multiplatform C++ library for capturing, parsing and crafting of network packets
 
