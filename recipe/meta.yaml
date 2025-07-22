@@ -22,6 +22,7 @@ outputs:
     script: build-lib.sh
     requirements:
       build:
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - make
         - cmake
@@ -41,13 +42,13 @@ about:
   home: https://pcapplusplus.github.io/
   license: Unlicense AND MIT AND Zlib AND BSD-2-Clause AND ISC AND GPL-2.0-or-later
   license_file:
-   - LICENSE
-   - 3rdParty/LightPcapNg/LightPcapNg/LICENSE.txt
-   - 3rdParty/MemPlumber/MemPlumber/LICENSE
-   - 3rdParty/hash-library/LICENSE
-   - 3rdParty/Getopt-for-Visual-Studio/getopt.h
-   - 3rdParty/EndianPortable/include/EndianPortable.h
-   - 3rdParty/json/include/json.hpp
+    - LICENSE
+    - 3rdParty/LightPcapNg/LightPcapNg/LICENSE.txt
+    - 3rdParty/MemPlumber/MemPlumber/LICENSE
+    - 3rdParty/hash-library/LICENSE
+    - 3rdParty/Getopt-for-Visual-Studio/getopt.h
+    - 3rdParty/EndianPortable/include/EndianPortable.h
+    - 3rdParty/json/include/json.hpp
   summary: PcapPlusPlus is a multiplatform C++ library for capturing, parsing and crafting of network packets
   doc_url: https://pcapplusplus.github.io/docs/quickstart
   dev_url: https://github.com/seladb/PcapPlusPlus
