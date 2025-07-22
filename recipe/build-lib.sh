@@ -2,11 +2,7 @@
 
 set -euxo pipefail
 
-if [[ "${target_platform}" == osx-* ]]; then
-	./configure-mac_os_x.sh --default --install-dir $PREFIX
-else
-	./configure-linux.sh --default --install-dir $PREFIX
-fi
+cmake -S . -B build
+cmake --build build -- -j${CPU_COUNT}
 
-make -j${CPU_COUNT} libs
-make install
+DESTDIR=$PREFIX cmake --install build --prefix "/"
